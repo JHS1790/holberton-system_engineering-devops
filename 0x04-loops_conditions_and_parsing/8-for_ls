@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ls, ls, my testies for a list
+LIST=$(ls)
+for i in $LIST; do
+	EVAR=${i#*-}
+	echo "$EVAR"
+done
