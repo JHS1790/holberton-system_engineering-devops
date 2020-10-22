@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Fizz Aldrin and Buzz Armstrong
+for i in {1..100}; do
+	if (( "$i" % 3 == 0 )) && ! (( "$i" % 5 == 0 )); then
+		echo "Fizz"
+	fi
+	if (( "$i" % 5 == 0 )) && ! (( "$i" % 3 == 0 )); then
+		echo "Buzz"
+	fi
+	if (( "$i" % 3 == 0 )) && (( "$i" % 5 == 0 )); then
+		echo "FizzBuzz"
+	fi
+	if ! (( "$i" % 3 == 0 )) && ! (( "$i" % 5 == 0 )); then
+		echo "$i"
+	fi
+done
