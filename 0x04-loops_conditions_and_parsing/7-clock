@@ -4,7 +4,7 @@ h=0
 m=1
 while [ "$h" -le 12 ]; do
 	echo "Hour: $h"
-	while [ "$m" -le 60 ]; 
+	while [ "$m" -le 59 ]; 
 		do echo "$m"
 		m=$((m+1))
 	done
