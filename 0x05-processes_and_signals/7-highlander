@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# go for a loop
+dmy=1
+while [ "$dmy" -eq "1" ]; do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "echo I am invincible!!!" SIGTERM
+done
