@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# go for a loop
+# go for a loop in Scotland
 dmy=1
 while [ "$dmy" -eq "1" ]; do
 	echo "To infinity and beyond"

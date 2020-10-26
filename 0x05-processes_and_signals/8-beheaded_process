@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A fun day at ye olde exucution
+pgrep -f 7-highlander | xargs kill -s 9
