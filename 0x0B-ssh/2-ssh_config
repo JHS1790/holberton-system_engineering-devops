@@ -1,0 +1,5 @@
+HOST 1790-web-01
+  HostName 35.231.241.139
+  User ubuntu
+  PasswordAuthentication no
+  IdentityFile ~/.ssh/holberton
