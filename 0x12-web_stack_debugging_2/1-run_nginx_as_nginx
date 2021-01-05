@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #runs nginx as nginx user
-echo "server { listen 8080; }" >> /etc/nginx/sites-available/default | pkill -9 apache2
+sed -n 's/80/8080/g' /etc/nginx/sites-available/default
+pkill -9 apache2
 sudo chown nginx:nginx /etc/nginx/nginx.conf
 sudo chmod u+r /etc/nginx/nginx.conf
 sudo -u nginx /etc/init.d/nginx start
