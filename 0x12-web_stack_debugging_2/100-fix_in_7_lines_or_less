@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #runs nginx as nginx user
-pkill -9 apache2 | echo "server { listen 8080; }" >> /etc/nginx/sites-available/default
-sudo chown nginx:nginx /etc/nginx/nginx.conf
-sudo chmod u+r /etc/nginx/nginx.conf
-sudo -u nginx /etc/init.d/nginx start
+sed -i 's/80/8080/g' /etc/nginx/sites-available/default | pkill apache2
+echo "user nginx;" >> /etc/nginx/nginx.conf
+sudo chown -R nginx:nginx /etc/nginx | sudo chmod -R u+rwx /etc/nginx
+sudo -u nginx service nginx restart
