@@ -3,8 +3,8 @@
     a Python script that, using this REST API, for a given employee ID,
     returns information about his/her TODO list progress.
 """
-from sys import argv
 from requests import get
+from sys import argv
 
 baseURL = "https://jsonplaceholder.typicode.com/"
 user = get(baseURL + "users/" + argv[1])
