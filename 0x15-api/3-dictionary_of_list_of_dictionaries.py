@@ -10,7 +10,7 @@ if __name__ == "__main__":
     jusers = users.json()
     hidict = {}
     for user in jusers:
-        userID = user.get("userId")
+        userID = user.get("id")
         todos = get(baseURL + "todos?userId=" + str(userID))
         hidict[userID] = []
         for task in todos.json():
