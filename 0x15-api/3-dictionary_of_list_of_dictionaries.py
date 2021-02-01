@@ -15,7 +15,7 @@ if __name__ == "__main__":
         hidict[userID] = []
         for task in todos.json():
             lodict = {"task": "{}".format(task.get("title")),
-                      "completed": "{}".format(task.get("completed")),
+                      "completed": task.get("completed"),
                       "username": "{}".format(user.get("username"))}
             hidict[userID].append(lodict)
     with open('todo_all_employees.json', mode='w+') as export_json:
