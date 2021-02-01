@@ -8,7 +8,7 @@ if __name__ == "__main__":
     baseURL = "https://jsonplaceholder.typicode.com/"
     user = get(baseURL + "users/" + argv[1])
     todos = get(baseURL + "todos?userId=" + argv[1])
-    name = user.json().get("name")
+    name = user.json().get("username")
     with open('{}.csv'.format(argv[1]), mode='w+') as export_csv:
         task_writer = csv.writer(export_csv,
                                  delimiter=',',
