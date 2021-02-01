@@ -13,7 +13,7 @@ if __name__ == "__main__":
     hidict = {"{}".format(argv[1]): []}
     for task in todos.json():
         lodict = {"task": "{}".format(task.get("title")),
-                  "completed": "{}".format(task.get("completed")),
+                  "completed": task.get("completed"),
                   "username": "{}".format(user.json().get("username"))}
         hidict[argv[1]].append(lodict)
     with open('{}.json'.format(argv[1]), mode='w+') as export_json:
