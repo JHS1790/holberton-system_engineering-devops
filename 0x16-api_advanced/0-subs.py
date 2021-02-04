@@ -3,6 +3,7 @@
 from requests import get
 
 def number_of_subscribers(subreddit):
+    """ reddit is the big gae """
     try:
         rq = get('https://www.reddit.com/r/{}/about.json'.format(subreddit),
                  headers={'User-Agent': 'custom'},
