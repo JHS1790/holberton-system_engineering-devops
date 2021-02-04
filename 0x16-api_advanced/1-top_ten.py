@@ -7,6 +7,7 @@ from requests import get
 
 
 def top_ten(subreddit):
+    """ boi howdy kill me """
     try:
         request = get(
                       'https://www.reddit.com/r/{}/hot.json?limit=10'
